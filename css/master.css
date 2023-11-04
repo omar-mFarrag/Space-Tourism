@@ -499,6 +499,10 @@ header nav ul li a:hover::before{
 
 /* Tablet size styling for destination page */
 @media (max-width: 1100px) {
+    .main-container{
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
+        background-size: cover;
+    }
     .d-container{
         flex-direction: column;
         gap: 0px;
@@ -554,6 +558,10 @@ header nav ul li a:hover::before{
 
 /* mobile sizing for destination style */
 @media (max-width: 767px) {
+    .main-container{
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
+        background-size: cover;
+    }
     .d-container{
         flex-direction: column;
         gap: 0px;
@@ -601,6 +609,55 @@ header nav ul li a:hover::before{
     }
     .d-container .destination-info p{
         font-size: 15px;
+    }
+    .d-container .destination-info .destination-km h4{
+        align-items: center;
+        font-size: 28px;
+    }
+    .d-container .destination-info{
+        gap: 20px;
+    }
+    .d-container .destination-info .destination-km{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+    .d-container{
+        justify-content: space-between;
+    }
+    .d-container .destination-img{
+        gap: 10px;
+    }
+    .d-container .destination-img img{
+        align-self: center;
+        width: 120px;
+    }
+    .d-container .destination-info{
+        gap: 10px;
+    }
+    .d-container .destination-info .destination-km{
+        justify-content: center;
+        width: 90%;
+    }
+    /* font sizing */
+    .d-container .destination-img h3,
+    .d-container .destination-img h3 span{
+        font-size: 14px;
+        letter-spacing: 2.7px;
+    }
+    .d-container .destination-info ul{
+        font-size: 11px;
+        gap: 16px;
+        height: 25px;
+    }
+    .d-container .destination-info h2{
+        font-size: 56px;
+    }
+    .d-container .destination-info p{
+        font-size: 12px;
     }
     .d-container .destination-info .destination-km h4{
         align-items: center;
