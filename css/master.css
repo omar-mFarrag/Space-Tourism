@@ -461,6 +461,7 @@ header nav ul li a:hover::before{
     line-height: 1.5;
     width: 444px;
     font-weight: 400;
+    height: 120px;
 
 }
 .destination-km{
@@ -671,4 +672,27 @@ header nav ul li a:hover::before{
         gap: 20px;
         justify-content: flex-start;
     }
+}
+
+/* destination animations */
+@keyframes DestinationName {
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    45%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    55%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.d-container .destination-info h2.planet-name{
+    animation: linear 1s;
 }

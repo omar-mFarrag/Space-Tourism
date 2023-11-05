@@ -30,10 +30,10 @@
             </div>
             <nav>
                 <ul class="desktop-and-tablet-menu">
-                <li><a href="./index.html"><span>01</span>HOME</a></li>
-                <li><a href="./destination.html" class="active-page"><span>02</span>DESTINATION</a></li>
-                <li><a href="#"><span>03</span>CREW</a></li>
-                <li><a href="#"><span>04</span>TECHNOLOGY</a></li>
+                <li><a href="./index.html"><span>00</span>HOME</a></li>
+                <li><a href="./destination.html" class="active-page"><span>01</span>DESTINATION</a></li>
+                <li><a href="#"><span>02</span>CREW</a></li>
+                <li><a href="#"><span>03</span>TECHNOLOGY</a></li>
                 </ul>
             </nav>
             <div class="menu-button" onclick="showAndHideMobileMenu()">
@@ -49,19 +49,19 @@
                         </span>
                         Pick your destination
                     </h3>
-                    <img src="./assets/destination/image-moon.png" alt="">
+                    <img id="destination-Image" src="./assets/destination/image-moon.png" alt="">
                 </div>
                 <div class="destination-info">
                     <ul>
-                        <li class="active-destination">MOON</li>
-                        <li>MARS</li>
-                        <li>EUROPA</li>
-                        <li>TITAN</li>
+                        <li onclick="selectedDestination(this)" class="your-destination moon active-destination">MOON</li>
+                        <li onclick="selectedDestination(this)" class="your-destination mars">MARS</li>
+                        <li onclick="selectedDestination(this)" class="your-destination europa">EUROPA</li>
+                        <li onclick="selectedDestination(this)" class="your-destination titan" >TITAN</li>
                     </ul>
-                    <h2 class="planet-name">
+                    <h2 class="planet-name" id="planet-name">
                         MOON
                     </h2>
-                    <p class="planet-description">
+                    <p id="dda" class="planet-description">
                         See our planet as you’ve never seen it before. A perfect 
                         relaxing trip away to help regain perspective and come 
                         back refreshed. While you’re there, take in some history 
