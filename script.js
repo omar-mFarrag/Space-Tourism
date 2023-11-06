@@ -21,7 +21,7 @@ var destinationSelection = document.getElementsByClassName('your-destination');
 var destinationDescription = ``
 var dda = document.getElementById('dda');
 var i = 0;
-canSelectDestination = true
+var canSelectDestination = true
 function selectedDestination(dest){
     if(canSelectDestination === true){
         canSelectDestination = false;
@@ -54,17 +54,92 @@ function selectedDestination(dest){
         // to change destination description
         dda.innerHTML = "";
         typeWriter();
+        if (dest.className.split(" ")[1] === 'moon') {
+            nextDestance = '384,400 KM';
+            nextTime = '3 DAYS';
+        } else if(dest.className.split(" ")[1] === 'mars' ) {
+            nextDestance = '225 MIL. KM';
+            nextTime = '9 MONTHS';
+        } else if(dest.className.split(" ")[1] === 'europa'){
+            nextDestance = '628 MIL. KM';
+            nextTime = '3 YEARS';
+        } else if(dest.className.split(" ")[1] === 'titan'){
+            nextDestance = '1.6 BIL. KM';
+            nextTime = '7 YEARS';
+        }
+        typingSpeed = 750 / nextDestance.length;
+        typingSpeedT = 750 / nextTime.length;
+        destanceDelete();
+        timeDelete();
         setTimeout(() => {
+            currentDestance = nextDestance;
+            destanceTyping();
+            currentTime = nextTime;
+            timeTyping();
+        },750);
+        setTimeout(() => {
+            deleteLocation = currentDestance.length;
+            deleteLocationT = currentTime.length;
             i = 0;
+            typingLocation = 0;
+            typingLocationT = 0;
             canSelectDestination = true;
         },  1600);
     }
 }
-var speed = 1500 / destinationDescription.length; /* The speed/duration of the effect in milliseconds */
+var speed = 1500 / destinationDescription.length;
 function typeWriter() {
     if (i < destinationDescription.length) {
         document.getElementById("dda").innerHTML += destinationDescription.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
+    }
+}
+
+var currentDestance = '384,400 km'
+var nextDestance = ''
+var deleteLocation = currentDestance.length;
+var deleteSpeed = 600 / (currentDestance.length + 1);
+
+function destanceDelete() {
+    if ( deleteLocation > -1 ) {
+        document.getElementById('d-destance').innerHTML = currentDestance.slice(0, deleteLocation)
+        setTimeout(destanceDelete , deleteSpeed);
+        console.log(deleteLocation);
+        deleteLocation--;
+    }
+}
+
+var typingLocation = 0
+var typingSpeed = 600 / nextDestance.length;
+function destanceTyping(){
+    if(typingLocation < nextDestance.length){
+        console.log('*' + typingLocation);
+        document.getElementById('d-destance').innerHTML += nextDestance.charAt(typingLocation)
+        typingLocation++;
+        setTimeout(destanceTyping, typingSpeed);
+    }
+}
+
+var currentTime = '3 DAYS'
+var nextTime = ''
+var deleteLocationT = currentTime.length;
+var deleteSpeedT = 600 / (currentTime.length + 1);
+
+function timeDelete() {
+    if ( deleteLocationT > -1 ) {
+        document.getElementById('d-time').innerHTML = currentTime.slice(0, deleteLocationT)
+        setTimeout(timeDelete , deleteSpeedT);
+        deleteLocationT--;
+    }
+}
+
+var typingLocationT = 0
+var typingSpeedT = 600 / nextTime.length;
+function timeTyping(){
+    if(typingLocationT < nextTime.length){
+        document.getElementById('d-time').innerHTML += nextTime.charAt(typingLocationT)
+        typingLocationT++;
+        setTimeout(timeTyping, typingSpeedT);
     }
 }

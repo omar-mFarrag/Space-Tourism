@@ -234,7 +234,7 @@ header nav ul li a:hover::before{
 .menu-button{
     display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 860px) {
     body{
         background-image: url(../assets/home/background-home-mobile.jpg);
     }
@@ -368,10 +368,10 @@ header nav ul li a:hover::before{
 .d-container .destination-img{
     width: 45%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
 }
 .d-container .destination-img h3{
     color: var(--main-white);
@@ -440,14 +440,17 @@ header nav ul li a:hover::before{
 }
 .d-container .destination-info ul li.active-destination::before{
     width: 100%;
-    border-color: var(--main-blue);
+    border-color: var(--main-white);
 }
 .d-container .destination-info ul li.active-destination{
     color: var(--main-white);
-    border-color: var(--main-white);
 }
 .d-container .destination-info ul li:hover::before{
     width: 100%;
+    background-color: var(--main-blue);
+}
+.d-container .destination-info ul li.active-destination:hover::before{
+    background-color: var(--main-white);
 }
 .d-container .destination-info h2{
     font-family: var(--special-font);
@@ -461,7 +464,7 @@ header nav ul li a:hover::before{
     line-height: 1.5;
     width: 444px;
     font-weight: 400;
-    height: 120px;
+    height: 150px;
 
 }
 .destination-km{
@@ -469,16 +472,15 @@ header nav ul li a:hover::before{
     padding: 30px 0px 0px 0px;
     border-top: 1px solid var(--main-blue);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 80px;
 }
-
 .avg-destance,
 .avg-time{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: var(--main-white);
     font-size: 30px;
@@ -486,9 +488,16 @@ header nav ul li a:hover::before{
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 10px;
-    align-items: flex-start;
+    font-size: 28px;
+    height: 57px;
+    width: 160px;
+}
+.avg-destance h3,
+.avg-time h3{
+    font-size: 28px;
+    font-weight: 400;
+    font-family: var(--sepical-font);
 }
 .avg-destance span,
 .avg-time span{
@@ -499,178 +508,111 @@ header nav ul li a:hover::before{
 }
 
 /* Tablet size styling for destination page */
-@media (max-width: 1100px) {
-    .main-container{
-        background-image: url(../assets/destination/background-destination-tablet.jpg);
-        background-size: cover;
-    }
+@media (max-width: 1024px) {
     .d-container{
         flex-direction: column;
-        gap: 0px;
-        justify-content: center;
-    }
-    .d-container .destination-img,
-    .d-container .destination-info{
-        width: 100%;
-        height: fit-content;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        position: relative;
+        height: calc(100% - 80px);
     }
     .d-container .destination-img{
-        align-items: flex-start;
+        width: 100%;
+        align-items: center;
         padding: 20px;
     }
     .d-container .destination-img img{
         align-self: center;
-        width: 300px;
+        width: 250px;
+    }
+    .d-container .destination-info{
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+        gap: 20px;
     }
     .d-container .destination-info ul{
         justify-content: center;
-        font-family: var(--main-font);
     }
     .d-container .destination-info p{
-        width: 90%;
-        text-align: center;
+        width: 80%;
+        height: 100px;
     }
     .d-container .destination-info .destination-km{
-        justify-content: center;
         width: 80%;
+        gap: 0px;
+        justify-content: space-around;
+        align-items: center;
     }
-    /* font sizing */
-    .d-container .destination-img h3{
+    .d-container .destination-info .destination-km h4{
+        align-items: center;
+    }
+    /* for text sizing */
+    .d-container .destination-img h3 {
         font-size: 20px;
     }
-    .d-container .destination-info ul{
+    .d-container .destination-img h3 span{
+        font-size: 20px;
+    }
+    .d-container .destination-img img{
+        width: 350px;
+    }
+    .d-container .destination-info ul li{
         font-size: 16px;
     }
-    .d-container .destination-info h2{
+    .d-container .destination-info h2.planet-name{
         font-size: 80px;
     }
     .d-container .destination-info p{
         font-size: 16px;
-    }
-    .d-container .destination-info .destination-km h4{
-        align-items: center;
-        font-size: 28px;
-    }
-}
-
-
-
-/* mobile sizing for destination style */
-@media (max-width: 767px) {
-    .main-container{
-        background-image: url(../assets/destination/background-destination-mobile.jpg);
-        background-size: cover;
-    }
-    .d-container{
-        flex-direction: column;
-        gap: 0px;
-        justify-content: center;
-    }
-    .d-container .destination-img,
-    .d-container .destination-info{
-        width: 100%;
-        height: fit-content;
-        justify-content: center;
-        align-items: center;
-    }
-    .d-container .destination-img{
-        align-items: center;
-        padding: 10px;
-    }
-    .d-container .destination-img img{
-        align-self: center;
-        width: 170px;
-    }
-    .d-container .destination-info ul{
-        justify-content: center;
-        font-family: var(--main-font);
-    }
-    .d-container .destination-info p{
-        width: 90%;
-        text-align: center;
+        width: 500px;
     }
     .d-container .destination-info .destination-km{
-        justify-content: center;
-        width: 90%;
+        width: 500px;
     }
-    /* font sizing */
-    .d-container .destination-img h3,
+}
+@media (max-width: 767px) {
+    /* for text sizing */
+    .d-container .destination-img h3 {
+        font-size: 16px;
+    }
     .d-container .destination-img h3 span{
         font-size: 16px;
-        letter-spacing: 2.7px;
-    }
-    .d-container .destination-info ul{
-        font-size: 14px;
-        gap: 16px;
-    }
-    .d-container .destination-info h2{
-        font-size: 56px;
-    }
-    .d-container .destination-info p{
-        font-size: 15px;
-    }
-    .d-container .destination-info .destination-km h4{
-        align-items: center;
-        font-size: 28px;
-    }
-    .d-container .destination-info{
-        gap: 20px;
-    }
-    .d-container .destination-info .destination-km{
-        flex-direction: column;
-        gap: 20px;
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 380px) {
-    .d-container{
-        justify-content: space-between;
-    }
-    .d-container .destination-img{
-        gap: 10px;
     }
     .d-container .destination-img img{
-        align-self: center;
-        width: 120px;
+        width: 170px;
     }
-    .d-container .destination-info{
-        gap: 10px;
-    }
-    .d-container .destination-info .destination-km{
-        justify-content: center;
-        width: 90%;
-    }
-    /* font sizing */
-    .d-container .destination-img h3,
-    .d-container .destination-img h3 span{
+    .d-container .destination-info ul li{
         font-size: 14px;
-        letter-spacing: 2.7px;
     }
-    .d-container .destination-info ul{
-        font-size: 11px;
-        gap: 16px;
-        height: 25px;
-    }
-    .d-container .destination-info h2{
+    .d-container .destination-info h2.planet-name{
         font-size: 56px;
     }
     .d-container .destination-info p{
-        font-size: 12px;
+        font-size: 16px;
+        width: 90%;
+        height: 100px;
     }
-    .d-container .destination-info .destination-km h4{
-        align-items: center;
-        font-size: 28px;
+    .d-container .destination-info .destination-km{
+        width: 90%;
     }
     .d-container .destination-info{
-        gap: 20px;
+        justify-content: flex-start;
     }
     .d-container .destination-info .destination-km{
         flex-direction: column;
+        align-items: center;
         gap: 20px;
-        justify-content: flex-start;
+    }
+    .d-container .destination-img{
+        gap: 20px;
+    }
+}
+@media (max-height: 700px) {
+    .d-container .destination-info .destination-km{
+        flex-direction: row;
     }
 }
 
@@ -682,11 +624,11 @@ header nav ul li a:hover::before{
     }
     45%{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     55%{
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
     100%{
         opacity: 1;
