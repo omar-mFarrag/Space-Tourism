@@ -1,0 +1,183 @@
+:root{
+    --main-balck: #0B0D17;
+    --main-white: #FFFFFF;
+    --main-blue: #D0D6F9;
+    --barlow-font:  'Barlow Condensed', sans-serif;
+    --bellefair-font: 'Bellefair', serif;
+}
+
+.main-container{
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size: cover;
+}
+@media (max-width: 1024px) {
+    .main-container{
+        background-image: url(../assets/home/background-home-tablet.jpg);
+        background-size: cover;
+    }
+}
+@media (max-width: 767px) {
+    .main-container{
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-size: cover;
+    }
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .home-text{
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 45%;
+}
+.container .home-text h3{
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--main-blue);
+    font-family: var(--barlow-font);
+    letter-spacing: 4.72px;
+}
+.container .home-text h1{
+    font-size: 150px;
+    font-weight: 400;
+    color: var(--main-white);
+    font-family: var(--bellefair-font);
+}
+.container .home-text p{
+    font-size: 18px;
+    width: 500px;
+    color: var(--main-blue);
+    line-height: 2;
+    font-family: var(--barlow-font);
+}
+.container .home-explore {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .home-explore a{
+    text-decoration: none;
+    color: var(--main-balck);
+    background-color: var(--main-white);
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    font-family: var(--bellefair-font);
+    z-index: 2;
+}
+.container .home-explore a::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-white);
+    opacity: 10.36%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transition: .3s;
+    z-index: -1;
+}
+.container .home-explore a:hover::before{
+    width: 430px;
+    height: 430px;
+}
+/* style for tablite sizing */
+@media (max-width: 1024px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container .home-text {
+        width: 540px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 50%;
+    }
+    .container .home-explore{
+        height: 50%;
+        width: 100%;
+    }
+    .container .home-text h3 {
+        font-size: 20px;
+    }
+    .container .home-text p{
+        font-size: 16px;
+        width: 400px;
+    }
+    .container .home-explore a {
+        width: 242px;
+        height: 242px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-container{
+        padding: 0;
+    }
+    .container .home-text{
+        gap: 16px;
+    }
+    .container .home-explore{
+        height: 50%;
+        width: 100%;
+    }
+    .container .home-text h3 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+    .container .home-text h1 {
+        font-size: 80px;
+    }
+    .container .home-text p{
+        font-size: 15px;
+        width: 300px;
+    }
+    .container .home-explore a {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 330px) {
+    .container .home-explore{
+        height: fit-content;
+        width: fit-content;
+    }
+}
+@media (max-height: 480px) {
+    .container .home-explore{
+        width: fit-content;
+        height: fit-content;
+    }
+    .container .home-explore a{
+        font-size: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .container .home-text {
+        gap: 10px;
+    }
+    .container .home-text h3{
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .container .home-text p{
+        line-height: 1.6;
+        font-size: 13px;
+    }
+}

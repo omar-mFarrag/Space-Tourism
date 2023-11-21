@@ -1,0 +1,218 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+:root{
+    --main-balck: #0B0D17;
+    --main-white: #FFFFFF;
+    --main-blue: #D0D6F9;
+    --barlow-font:  'Barlow Condensed', sans-serif;
+    --bellefair-font: 'Bellefair', serif;
+}
+
+
+.mobile-menu,
+.menu-button{
+    display: none;
+}
+.main-container{
+    background-color: red;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 40px;
+    height: 90px;
+}
+header .logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    max-height: 100%;
+}
+header nav{
+    background-color: #ffffff11;
+    backdrop-filter: blur(7px);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+    height: 100%;
+}
+header nav ul li a{
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    font-family: var(--barlow-font);
+}
+header nav ul li a span{
+    margin-right: 7px;
+    font-weight: bold;
+    letter-spacing: 2.7px;
+}
+header nav::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: var(--main-white);
+    top: 50%;
+    left: 0px;
+    transform: translate(calc(-100% + 20px), -50%);
+}
+header nav ul li{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header nav ul li a::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: var(--main-white);
+    bottom: 0;
+    width: 0%;
+    left: 50%;
+    transition: .3s;
+    transform: translateX(-50%);
+}
+header nav ul li a.active-page::before{
+    width: 100%;
+}
+header nav ul li a:hover::before{
+    width: 100%;
+}
+/* Style header for tablet devices */
+@media (max-width: 1024px) {
+
+    header nav::before{
+        display: none;
+    }
+    header nav ul{
+        justify-content: space-evenly;
+        gap: 0;
+        width: 100%;
+    }
+    header nav ul li a{
+        font-size: 14px;
+        letter-spacing: 2.34px;
+    }
+    header nav ul a span{
+        display: none;
+    }
+}
+/* header styling for mobile sizing */
+@media (max-width: 767px) {
+    .main-container{
+        position: relative;
+        overflow: hidden;
+    }
+    header nav{
+        display: none;
+    }
+    .menu-button img{
+        width: 24px;
+    }
+    header{
+        padding: 20px;
+    }
+    .menu-button {
+        z-index: 1001;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        padding: 10px 20px 0px 20px;
+        margin-top: 0px;
+        height: 80px;
+    }
+    body .mobile-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: #ffffff12;
+        backdrop-filter: blur(50px);
+        width: 70%;
+        z-index: 100;
+        padding: 100px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        list-style: none;
+        transition: .3s;
+    }
+    body .mobile-menu li{
+        width: 100%;
+        padding:  0px 0px 0px 20px;
+        position: relative;
+        display: flex;
+    }
+    body .mobile-menu li a{
+        color: var(--main-white);
+        text-decoration: none;
+        font-size: 16px;
+        width: 100%;
+        font-weight: 400;
+        letter-spacing: 2.7px;
+    }
+    body .mobile-menu li a span{
+        margin-right: 11px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2.7px;
+        font-family: var(--barlow-font);
+    }
+    body .mobile-menu li a.active-page{
+        border-right: 4px solid var(--main-white);
+    }
+    .mobile-menu{
+        transform: translateX(100%);
+    }
+    header .logo img{
+        width: 40px;
+    }
+}
+.container{
+    flex-grow: 1;
+    position: relative;
+    color: white;
+}
