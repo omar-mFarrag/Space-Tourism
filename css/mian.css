@@ -168,9 +168,9 @@ header nav ul li a:hover::before{
         top: 0;
         right: 0;
         height: 100vh;
-        background-color: #ffffff12;
-        backdrop-filter: blur(50px);
-        width: 70%;
+        background-color: #ffffff04;
+        backdrop-filter: blur(30px);
+        width: 60%;
         z-index: 100;
         padding: 100px 0px 0px 0px;
         display: flex;
