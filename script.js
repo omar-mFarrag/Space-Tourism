@@ -143,3 +143,5 @@ function timeTyping(){
         setTimeout(timeTyping, typingSpeedT);
     }
 }
+
+// This part for crew section

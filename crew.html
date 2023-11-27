@@ -48,20 +48,20 @@
                     </span>
                     Meet your crew
                 </h3>
-                <div class="crew-info-text">
-                    <h3>Commander </h3>
-                    <h2>Douglas Hurley</h2>
-                    <p>Douglas Gerald Hurley is an American engineer, 
+                <div id="crew-info-text" class="crew-info-text">
+                    <h3 id="job-title">Commander </h3>
+                    <h2 id="name">Douglas Hurley</h2>
+                    <p id="bio">Douglas Gerald Hurley is an American engineer, 
                         former Marine Corps pilot and former NASA astronaut. 
                         He launched into space for the third time as commander 
                         of Crew Dragon Demo-2.
                     </p>
                 </div>
                 <div class="crew-selector">
-                    <span class="active-crew"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span onclick="crewChange(this)" class="crew-selecting-point active-crew"></span>
+                    <span onclick="crewChange(this)" class="crew-selecting-point"></span>
+                    <span onclick="crewChange(this)" class="crew-selecting-point"></span>
+                    <span onclick="crewChange(this)" class="crew-selecting-point"></span>
                 </div>
             </div>
             <div class="crew-img">
@@ -71,10 +71,11 @@
                     </span>
                     Meet your crew
                 </h3>
-                <img src="./assets/crew/image-douglas-hurley.png" alt="">
+                <img id="crew-image" src="./assets/crew/1.png" alt="">
             </div>
         </div>
     </div>
     <script src="./script.js"></script>
+    <script src="./crewScript.js"></script>
 </body>
 </html>
