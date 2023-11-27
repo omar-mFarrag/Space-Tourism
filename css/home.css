@@ -152,6 +152,10 @@
         height: 150px;
         font-size: 20px;
     }
+    .container .home-explore a:hover::before{
+    width: 200px;
+    height: 200px;
+    }
 }
 @media (max-width: 330px) {
     .container .home-explore{
