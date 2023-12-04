@@ -70,11 +70,11 @@ function technologyChange(ele){
                 }
             }else{
                 if (Number(ele.innerHTML) == 1) {
-                    techImg.style.content = `url(../assets/technology/image-launch-vehicle-landscape.jpg)`;
+                    techImg.style.content = `url(./assets/technology/image-launch-vehicle-landscape.jpg)`;
                 } else if (Number(ele.innerHTML) == 2) {
-                    techImg.style.content = `url(../assets/technology/image-spaceport-landscape.jpg)`;
+                    techImg.style.content = `url(./assets/technology/image-spaceport-landscape.jpg)`;
                 } else if (Number(ele.innerHTML) == 3) {
-                    techImg.style.content = `url(../assets/technology/image-space-capsule-landscape.jpg)`;
+                    techImg.style.content = `url(./assets/technology/image-space-capsule-landscape.jpg)`;
                 }
             }
         }, 750);

@@ -54,6 +54,9 @@
     color: white;
     margin-right: 22px;
     width: 80%;
+    text-transform: uppercase;
+    font-family: var(--barlow-font);
+    font-weight: 400;
 }
 .tech-info{
     flex-grow: 1;
