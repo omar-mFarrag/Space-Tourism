@@ -1,3 +1,14 @@
+#e5fi{
+    position: absolute;
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+}#e5fi img{
+    max-width: 100%;
+    width: 10px;
+    height: 10px;
+    z-index: -1111111;
+}
 :root{
     --main-balck: #0B0D17;
     --main-white: #FFFFFF;
